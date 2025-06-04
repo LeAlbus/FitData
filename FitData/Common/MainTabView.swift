@@ -23,14 +23,7 @@ struct MainTabView: View {
                 }
                 .tag(Tab.diet)
             
-            WorkoutView(model: WorkoutModel(Sessions: [
-                WorkoutSessionModel(code: "A", name: "Superior", icon: "figure.strengthtraining.traditional", color: .blue),
-                WorkoutSessionModel(code: "B", name: "Torso", icon: "figure.core.training", color: .blue),   
-                WorkoutSessionModel(code: "C", name: "Inferior", icon: "figure.cross.training", color: .blue),
-                WorkoutSessionModel(code: "A", name: "Superior", icon: "figure.strengthtraining.traditional", color: .blue),
-                WorkoutSessionModel(code: "B", name: "Torso", icon: "figure.core.training", color: .blue),   
-                WorkoutSessionModel(code: "C", name: "Inferior", icon: "figure.cross.training", color: .blue)
-            ]))
+            WorkoutView(model: WorkoutModel(sessions: []))
                 .tabItem{
                     Label("Workout", systemImage: "figure.strengthtraining.traditional")
                 }

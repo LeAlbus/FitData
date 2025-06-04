@@ -5,6 +5,16 @@
 //  Created by Pedro Lopes on 03/06/25.
 //
 
-struct WorkoutModel {
-    var Sessions: [WorkoutSessionModel]
+import SwiftUI
+
+class WorkoutModel: ObservableObject {
+    @Published var sessions: [WorkoutSessionModel]
+    
+    public init (sessions: [WorkoutSessionModel] = []) {
+        self.sessions = sessions
+    }
+    
+    func addNewSession(_ session: WorkoutSessionModel) { 
+        sessions.append(session)
+    }
 }
